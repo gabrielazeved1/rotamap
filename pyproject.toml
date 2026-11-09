@@ -63,6 +63,9 @@ select = [
     "RUF",
 ]
 
+# setas e travessao sao texto de interface do ppt, nao erro de digitacao
+allowed-confusables = ["–", "‹", "›"]
+
 [tool.ruff.lint.per-file-ignores]
 "tests/**" = ["T20"]
 
@@ -75,6 +78,12 @@ files = ["src"]
 [[tool.mypy.overrides]]
 module = ["geopandas.*", "shapely.*"]
 ignore_missing_imports = true
+
+# o python-pptx tem tipagem parcial: varias chamadas ainda sao untyped
+[[tool.mypy.overrides]]
+module = ["rotamap.ppt.*"]
+disallow_untyped_calls = false
+warn_return_any = false
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

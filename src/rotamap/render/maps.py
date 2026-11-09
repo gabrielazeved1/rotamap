@@ -182,7 +182,7 @@ def _nomes(fig: Figure, ax: Axes, rota: gpd.GeoDataFrame) -> None:
     # canvas agg para medir o texto sem pyplot
     FigureCanvasAgg(fig)
     ocupadas: list[Bbox] = []
-    omitidos = []
+    omitidos: list[str] = []
     # os maiores primeiro: tem mais espaco e ficam com o nome centralizado
     for nome, geometria in sorted(
         zip(rota["nome"], rota.geometry, strict=True), key=lambda par: -par[1].area
@@ -241,6 +241,8 @@ def _salvar_hotspots(
     dados = {
         "versao": VERSAO_HOTSPOTS,
         "imagem": ARQ_MENU,
+        # a capa sai do mesmo desenho, sem os numeros: os hotspots valem para as duas
+        "imagem_sem_rotulos": ARQ_CAPA,
         "largura_px": round(tamanho[0] * dpi),
         "altura_px": round(tamanho[1] * dpi),
         # coordenadas de 0 a 1 a partir do canto superior esquerdo; raio relativo a largura
