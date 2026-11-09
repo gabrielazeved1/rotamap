@@ -12,16 +12,35 @@ mapa, KPIs e lista de cidades. Funciona para qualquer UF, com a malha oficial do
   <img src="examples/output/mapa_menu.png" alt="mapa de rotas de SP com os números de cada rota" width="720">
 </p>
 
-## Por que existe
+## Contexto
 
-O projeto nasceu de um freela para uma distribuidora: todo mês, alguém exportava um relatório
-do ERP e montava à mão um PowerPoint com o mapa de cada rota. A primeira versão foram scripts
-soltos que só funcionavam para aquele cliente, aquele relatório e o estado de São Paulo, e que
-tinham problemas visíveis: números das rotas encavalados no mapa, cores repetidas lado a lado,
-cidades com nome fora do padrão quebrando o mapa e botões clicáveis alinhados na tentativa e erro.
+O projeto nasceu de um freela para um atacadista do Centro-Oeste. A carga ficava estocada num
+centro de distribuição no interior de São Paulo e só depois seguia para as rotas de entrega no
+estado. A empresa queria diminuir esse estoque intermediário e avaliava mandar a carga direto
+para as rotas, mas antes precisava enxergar como elas estavam distribuídas: quais municípios
+cada rota atendia e quais eram os números de cada uma.
+
+Os dados estavam num relatório de rentabilidade por rota exportado do ERP. A primeira versão
+foram scripts soltos que liam esse relatório e montavam um PowerPoint com o mapa de cada rota.
+Funcionavam só para aquele cliente, aquele relatório e o estado de São Paulo, e tinham
+problemas visíveis: números das rotas encavalados no mapa, cores repetidas lado a lado, cidades
+com nome fora do padrão quebrando o mapa e botões clicáveis alinhados na tentativa e erro.
 
 O `rotamap` é a reescrita genérica: entrada documentada, qualquer UF, etapas que rodam juntas
 ou separadas, e cada um daqueles problemas resolvido e coberto por teste.
+
+## O que ele entrega
+
+- **Mapa geral** com todas as rotas, cores distintas entre vizinhas e o número de cada rota
+- **Um mapa por rota**, com os municípios nomeados e o entorno em cinza para dar contexto
+- **Apresentação PowerPoint** com capa, menu clicável (números do mapa e grade de rotas) e um
+  slide por rota com KPIs e lista de municípios, todos ligados por links
+- **Relatório de matching** (`matching.csv`) mostrando como cada nome da entrada foi associado
+  ao município oficial, com os casos que pedem revisão primeiro
+
+<p align="center">
+  <img src="examples/output/mapa_rota.png" alt="mapa de uma rota com os nomes dos municípios" width="460">
+</p>
 
 ## Início rápido
 
@@ -46,7 +65,9 @@ rotamap exemplo --uf MG --rotas 30 -o teste/rotas.csv
 rotamap run teste/rotas.csv -o teste/
 ```
 
-## Formato de entrada
+## Uso
+
+### Formato de entrada
 
 Um CSV com uma linha por município de cada rota:
 
@@ -54,7 +75,7 @@ Um CSV com uma linha por município de cada rota:
 | -------------- | -------------------------- | ----------------------------------------- |
 | `rota_id`      | sim                        | `101`                                     |
 | `rota_nome`    | sim                        | `Região de Campinas`                      |
-| `municipio`    | sim                        | `Ribeirão Preto`                          |
+| `municipio`    | sim                        | `Sorocaba`                                |
 | `uf`           | sim                        | `SP`                                      |
 | `cod_ibge`     | não, mas evita ambiguidade | `3543402`                                 |
 | `ordem`        | não                        | `3`                                       |
@@ -68,15 +89,16 @@ O formato `erp_914` é um adaptador para o relatório "914 - Rentabilidade por R
 original: um layout de impressão salvo como CSV, em Mac Roman, com cabeçalho repetido a cada
 página. Ele fica como exemplo de como encaixar uma exportação real e bagunçada no formato acima.
 
-## Como funciona
+### Etapas
 
-```
+```text
 CSV ──parse──▶ rotas.json ──geo──▶ rotas_geo.json ──maps──▶ mapas/ ──ppt──▶ apresentacao.pptx
                                    rotas_geo.gpkg            capa, menu, hotspots.json,
                                    matching.csv              um PNG por rota
 ```
 
-Cada etapa lê o artefato da anterior, então dá para rodar por partes:
+O `rotamap run` faz tudo de uma vez. Como cada etapa lê o artefato da anterior, também dá para
+rodar por partes, por exemplo para corrigir um alias e refazer só dali em diante:
 
 ```bash
 rotamap parse dados.csv -o saida/   # valida e normaliza
@@ -84,6 +106,32 @@ rotamap geo -o saida/               # associa os municípios à malha do IBGE
 rotamap maps -o saida/              # desenha os mapas
 rotamap ppt -o saida/               # monta a apresentação
 ```
+
+### Configuração
+
+Tudo é opcional e fica num arquivo TOML passado com `-c`; veja o
+[`config.example.toml`](config.example.toml) comentado. Um trecho:
+
+```toml
+titulo = "Rotas de entrega"
+
+[geo.aliases]
+"FILIAL SOROCABA" = "3552205"
+"RETIRADA NO BALCAO" = ""
+
+[[metricas]]
+rotulo = "Margem"
+coluna = "lucro_pct"
+agregacao = "ponderada"
+peso = "valor_total"
+formato = "percentual"
+casas = 1
+```
+
+Chaves desconhecidas geram erro com a lista das válidas, para erro de digitação não passar
+em silêncio.
+
+## Como funciona
 
 ### Associação com o IBGE
 
@@ -97,9 +145,8 @@ nesta ordem:
    hífens e pontuação;
 4. **distrito**: "Bonfim Paulista" vira Ribeirão Preto pela API de distritos do IBGE;
 5. **aproximado**, por similaridade de texto acima de um limite configurável;
-6. **prefixo**: "CAMPINAS NORTE" e "RIBEIRAO PRETO FILIAL" viram o município do começo do nome.
+6. **prefixo**: "CAMPINAS NORTE" e "SOROCABA FILIAL" viram o município do começo do nome.
 
-O resultado de cada linha vai para o `matching.csv`, com os casos que pedem revisão primeiro.
 No relatório real do freela, todos os municípios foram associados sem correções no código; a
 versão anterior precisava de um dicionário fixo com 16 exceções.
 
@@ -116,40 +163,12 @@ A malha e os nomes vêm da API de serviços de dados do IBGE e ficam em cache lo
   inteira e as posições dos números são exportadas em coordenadas relativas. Um teste abre o PNG
   e confere o pixel embaixo de cada número.
 
-<p align="center">
-  <img src="examples/output/mapa_rota.png" alt="mapa de uma rota com os nomes dos municípios" width="460">
-</p>
-
 ### Apresentação
 
 No menu, os números são círculos nativos do PowerPoint sobre o mapa: ficam nítidos em qualquer
-zoom e editáveis. Cada slide de rota mostra os KPIs configurados, com agregação correta
-(soma, média, média ponderada, razão ou contagem de municípios) e formato brasileiro de moeda
-e porcentagem.
-
-## Configuração
-
-Tudo é opcional e fica num arquivo TOML; veja o [`config.example.toml`](config.example.toml)
-comentado. Um trecho:
-
-```toml
-titulo = "Rotas de entrega"
-
-[geo.aliases]
-"FILIAL RIBEIRAO" = "3543402"
-"RETIRADA NO BALCAO" = ""
-
-[[metricas]]
-rotulo = "Margem"
-coluna = "lucro_pct"
-agregacao = "ponderada"
-peso = "valor_total"
-formato = "percentual"
-casas = 1
-```
-
-Chaves desconhecidas geram erro com a lista das válidas, para erro de digitação não passar
-em silêncio.
+zoom, editáveis e com o mesmo tamanho em qualquer UF. Cada slide de rota mostra os KPIs
+configurados, com agregação correta (soma, média, média ponderada, razão ou contagem de
+municípios) e formato brasileiro de moeda e porcentagem.
 
 ## Desenvolvimento
 
