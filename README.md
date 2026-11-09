@@ -50,15 +50,15 @@ rotamap run teste/rotas.csv -o teste/
 
 Um CSV com uma linha por município de cada rota:
 
-| coluna | obrigatória | exemplo |
-|---|---|---|
-| `rota_id` | sim | `101` |
-| `rota_nome` | sim | `Região de Campinas` |
-| `municipio` | sim | `Ribeirão Preto` |
-| `uf` | sim | `SP` |
-| `cod_ibge` | não, mas evita ambiguidade | `3543402` |
-| `ordem` | não | `3` |
-| qualquer outra | não | `valor_total`, `entregas`, `lucro_pct`... |
+| coluna         | obrigatória                | exemplo                                   |
+| -------------- | -------------------------- | ----------------------------------------- |
+| `rota_id`      | sim                        | `101`                                     |
+| `rota_nome`    | sim                        | `Região de Campinas`                      |
+| `municipio`    | sim                        | `Ribeirão Preto`                          |
+| `uf`           | sim                        | `SP`                                      |
+| `cod_ibge`     | não, mas evita ambiguidade | `3543402`                                 |
+| `ordem`        | não                        | `3`                                       |
+| qualquer outra | não                        | `valor_total`, `entregas`, `lucro_pct`... |
 
 Toda coluna extra é tratada como métrica numérica. O leitor junta todos os problemas do arquivo
 numa única mensagem, com o número da linha (UF inválida, rota com dois nomes, município repetido,
@@ -93,7 +93,7 @@ nesta ordem:
 1. **código IBGE**, se veio na entrada;
 2. **alias** do arquivo de configuração (`"CD CAMPINAS" = "Campinas"`; texto vazio marca o
    que não é cidade, como "retirada no balcão");
-3. **nome exato**, depois de normalizar acentos, apóstrofos (`d'Oeste`, `D´OESTE`, `` D`ALHO ``),
+3. **nome exato**, depois de normalizar acentos, apóstrofos (`d'Oeste`, `D´OESTE`, ``D`ALHO``),
    hífens e pontuação;
 4. **distrito**: "Bonfim Paulista" vira Ribeirão Preto pela API de distritos do IBGE;
 5. **aproximado**, por similaridade de texto acima de um limite configurável;
@@ -178,16 +178,3 @@ pytest          # sem acesso à rede
 ## Licença
 
 [MIT](LICENSE)
-
----
-
-## In English
-
-**rotamap** turns a delivery-route spreadsheet into municipality maps and a clickable PowerPoint
-deck (cover, interactive overview map, one slide per route with map, KPIs and city list) for any
-Brazilian state, using the official IBGE boundaries. Highlights: robust matching of messy
-municipality names (aliases, districts, fuzzy and prefix matching, with a review report),
-neighbor-aware coloring, non-overlapping labels placed inside each route, pixel-tested alignment
-between map labels and clickable shapes, and a staged CLI (`parse`, `geo`, `maps`, `ppt`) where
-each step writes an artifact the next one reads. Python 3.11+, fully typed (mypy strict),
-130+ offline tests, MIT licensed.
