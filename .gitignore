@@ -1,5 +1,6 @@
-# por enquanto nenhum md sobe, o readme final entra no fim
+# so o readme sobe; claude.md e plano.md ficam locais
 *.md
+!README.md
 
 # python
 __pycache__/
