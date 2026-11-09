@@ -28,6 +28,7 @@ class Hotspot:
     rota_id: str
     x: float  # 0 a 1 a partir da esquerda da imagem
     y: float  # 0 a 1 a partir do topo da imagem
+    cor: str = "#BAB0AC"
 
 
 @dataclass(frozen=True, slots=True)
@@ -66,7 +67,7 @@ def ler_hotspots(caminho: Path) -> MapaMenu:
         largura_px=dados["largura_px"],
         altura_px=dados["altura_px"],
         raio=dados["raio"],
-        hotspots=[Hotspot(h["rota_id"], h["x"], h["y"]) for h in dados["hotspots"]],
+        hotspots=[Hotspot(h["rota_id"], h["x"], h["y"], h["cor"]) for h in dados["hotspots"]],
     )
 
 

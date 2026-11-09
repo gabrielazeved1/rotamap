@@ -138,7 +138,7 @@ def mapa_rota(
     _travar(ax)
     _nomes(fig, ax, rota)
 
-    caminho = pasta / PASTA_ROTAS / f"rota_{_seguro(rota_id)}.png"
+    caminho = caminho_mapa_rota(pasta, rota_id)
     fig.savefig(caminho, dpi=opcoes.dpi, transparent=True)
     return caminho
 
@@ -252,5 +252,6 @@ def _salvar_hotspots(
     caminho.write_text(json.dumps(dados, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def _seguro(texto: str) -> str:
-    return re.sub(r"[^A-Za-z0-9_-]+", "_", texto)
+def caminho_mapa_rota(pasta: Path, rota_id: str) -> Path:
+    seguro = re.sub(r"[^A-Za-z0-9_-]+", "_", rota_id)
+    return pasta / PASTA_ROTAS / f"rota_{seguro}.png"

@@ -6,7 +6,8 @@ from typing import Any
 
 import pytest
 
-# tres municipios reais com geometrias quadradas inventadas, lado a lado
+# tres municipios reais com geometrias quadradas inventadas, lado a lado perto de sp
+LADO = 0.2
 MUNICIPIOS = [
     ("3509502", "Campinas", (0, 0)),
     ("3543402", "Ribeirão Preto", (1, 0)),
@@ -36,8 +37,9 @@ def rede_fora(monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.setattr(urllib.request, "urlopen", sem_conexao)
 
 
-def _quadrado(x: int, y: int) -> dict[str, Any]:
-    anel = [[x, y], [x + 1, y], [x + 1, y + 1], [x, y + 1], [x, y]]
+def _quadrado(i: int, j: int) -> dict[str, Any]:
+    x, y = -48 + i * LADO, -23 + j * LADO
+    anel = [[x, y], [x + LADO, y], [x + LADO, y + LADO], [x, y + LADO], [x, y]]
     return {"type": "Polygon", "coordinates": [anel]}
 
 

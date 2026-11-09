@@ -47,16 +47,7 @@ MUNICIPIOS = Metrica("Municípios", agregacao=Agregacao.CONTAGEM, formato=Format
 PRESETS: dict[str, list[Metrica]] = {
     "erp_914": [
         MUNICIPIOS,
-        Metrica("Clientes atendidos", "atendidos", formato=Formato.INTEIRO),
-        Metrica("Entregas", "entregas", formato=Formato.INTEIRO),
         Metrica("Faturamento", "valor_total", formato=Formato.MOEDA),
-        Metrica(
-            "Valor por entrega",
-            "valor_total",
-            Agregacao.RAZAO,
-            por="entregas",
-            formato=Formato.MOEDA,
-        ),
         Metrica(
             "Margem",
             "lucro_pct",
@@ -64,6 +55,15 @@ PRESETS: dict[str, list[Metrica]] = {
             peso="valor_total",
             formato=Formato.PERCENTUAL,
             casas=1,
+        ),
+        Metrica("Clientes atendidos", "atendidos", formato=Formato.INTEIRO),
+        Metrica("Entregas", "entregas", formato=Formato.INTEIRO),
+        Metrica(
+            "Valor por entrega",
+            "valor_total",
+            Agregacao.RAZAO,
+            por="entregas",
+            formato=Formato.MOEDA,
         ),
     ],
 }
@@ -88,7 +88,7 @@ def agregar(paradas: list[Parada], metrica: Metrica) -> float | None:
     valores = [p.metricas[coluna] for p in paradas if coluna in p.metricas]
     match metrica.agregacao:
         case Agregacao.CONTAGEM:
-            return float(len({_chave_municipio(p) for p in paradas}))
+            return float(len({_chave_municipio(p) for p in paradas if not p.ignorada}))
         case Agregacao.SOMA:
             return sum(valores) if valores else None
         case Agregacao.MEDIA:

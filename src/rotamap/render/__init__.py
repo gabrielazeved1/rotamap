@@ -5,6 +5,7 @@ from rotamap.render.maps import (
     ARQ_MENU,
     PASTA_ROTAS,
     OpcoesRender,
+    caminho_mapa_rota,
     renderizar,
 )
 from rotamap.render.palette import atribuir_cores, gerar_paleta, vizinhanca
@@ -16,6 +17,7 @@ __all__ = [
     "PASTA_ROTAS",
     "OpcoesRender",
     "atribuir_cores",
+    "caminho_mapa_rota",
     "gerar_paleta",
     "posicionar_rotulos",
     "renderizar",

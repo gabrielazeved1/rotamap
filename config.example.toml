@@ -1,0 +1,67 @@
+# exemplo de configuracao do rotamap; tudo é opcional
+# uso: rotamap run dados.csv -c config.toml -o saida/
+
+titulo = "Rotas de entrega"
+subtitulo = "São Paulo · 1º semestre"
+# métricas que aparecem na capa, pelo rótulo; vazio usa as três primeiras
+resumo = ["Municípios", "Faturamento", "Margem"]
+
+[entrada]
+formato = "tidy"        # tidy ou erp_914
+encoding = "utf-8-sig"
+sep = ","               # no padrão do excel brasileiro: ";"
+decimal = "."           # no padrão do excel brasileiro: ","
+# uf_padrao = "SP"      # para linhas sem uf (só no erp_914)
+
+[geo]
+qualidade = "intermediaria"   # minima, intermediaria ou maxima
+cutoff = 0.85                 # similaridade mínima para aceitar um nome aproximado
+# ufs = ["MG"]                # ufs extras no mapa, além das que aparecem nos dados
+# malha = "malha/SP_Municipios_2024.shp"   # shapefile local do ibge, sem usar a api
+# cache = ".cache"                         # padrão: ~/.cache/rotamap
+
+# nome na entrada = município do ibge (nome ou código); vazio ignora a linha no mapa
+[geo.aliases]
+"CD CAMPINAS" = "Campinas"
+"FILIAL RIBEIRAO" = "3543402"
+"RETIRADA NO BALCAO" = ""
+
+[render]
+dpi = 200
+largura = 12.0              # polegadas do mapa geral
+rotulo = 0.022              # diâmetro dos números como fração da largura do mapa
+tamanho_rota = [6.5, 5.8]   # polegadas de cada mapa de rota
+
+[tema]
+fundo = "#F4F6F8"
+texto = "#2C3E50"
+fonte = "Calibri"
+
+# kpis de cada slide de rota, na ordem; sem [[metricas]] o rotamap usa o preset
+# do formato (erp_914) ou a soma de cada coluna numérica
+# agregacao: soma, media, ponderada (com peso), razao (com por) ou contagem
+# formato: numero, inteiro, moeda ou percentual
+[[metricas]]
+rotulo = "Municípios"
+agregacao = "contagem"
+formato = "inteiro"
+
+[[metricas]]
+rotulo = "Faturamento"
+coluna = "valor_total"
+formato = "moeda"
+
+[[metricas]]
+rotulo = "Margem"
+coluna = "lucro_pct"
+agregacao = "ponderada"
+peso = "valor_total"
+formato = "percentual"
+casas = 1
+
+[[metricas]]
+rotulo = "Ticket por entrega"
+coluna = "valor_total"
+agregacao = "razao"
+por = "entregas"
+formato = "moeda"

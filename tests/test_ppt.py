@@ -122,4 +122,4 @@ def test_ler_hotspots_usa_a_imagem_sem_numeros(tmp_path: Path) -> None:
     menu = ler_hotspots(tmp_path / "hotspots.json")
 
     assert menu.imagem == tmp_path / "mapa_capa.png"
-    assert menu.hotspots == [Hotspot("7", 0.1, 0.2)]
+    assert menu.hotspots == [Hotspot("7", 0.1, 0.2, "#000000")]

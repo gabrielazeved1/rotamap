@@ -16,6 +16,9 @@ class Parada:
     ordem: int | None = None
     cod_ibge: str | None = None
     metricas: dict[str, float] = field(default_factory=dict)
+    # preenchidos na etapa geo
+    nome_ibge: str | None = None
+    ignorada: bool = False
 
 
 @dataclass(slots=True)

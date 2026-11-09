@@ -115,9 +115,9 @@ def test_preset_do_erp_914_reproduz_os_totais_do_relatorio() -> None:
 
     assert calcular(paradas, PRESETS["erp_914"]) == [
         ("Municípios", "2"),
+        ("Faturamento", "R$ 100.000"),
+        ("Margem", "12,0%"),
         ("Clientes atendidos", "40"),
         ("Entregas", "40"),
-        ("Faturamento", "R$ 100.000"),
         ("Valor por entrega", "R$ 2.500"),
-        ("Margem", "12,0%"),
     ]
