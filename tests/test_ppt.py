@@ -22,8 +22,6 @@ def conteudo(tmp_path: Path) -> Conteudo:
     mapa = _png(tmp_path / "rota.png", 130, 116)
     menu = MapaMenu(
         imagem=capa,
-        largura_px=300,
-        altura_px=200,
         raio=0.02,
         hotspots=[Hotspot("2", 0.25, 0.5), Hotspot("10", 0.75, 0.25)],
     )

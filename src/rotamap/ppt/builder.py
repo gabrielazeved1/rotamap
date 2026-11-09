@@ -34,8 +34,6 @@ class Hotspot:
 @dataclass(frozen=True, slots=True)
 class MapaMenu:
     imagem: Path
-    largura_px: int
-    altura_px: int
     raio: float  # relativo a largura da imagem
     hotspots: list[Hotspot]
 
@@ -64,8 +62,6 @@ def ler_hotspots(caminho: Path) -> MapaMenu:
     dados = json.loads(caminho.read_text(encoding="utf-8"))
     return MapaMenu(
         imagem=caminho.parent / dados["imagem_sem_rotulos"],
-        largura_px=dados["largura_px"],
-        altura_px=dados["altura_px"],
         raio=dados["raio"],
         hotspots=[Hotspot(h["rota_id"], h["x"], h["y"], h["cor"]) for h in dados["hotspots"]],
     )

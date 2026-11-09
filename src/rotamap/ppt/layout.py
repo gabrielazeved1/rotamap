@@ -15,14 +15,6 @@ class Caixa:
     largura: float
     altura: float
 
-    @property
-    def direita(self) -> float:
-        return self.x + self.largura
-
-    @property
-    def base(self) -> float:
-        return self.y + self.altura
-
 
 @dataclass(frozen=True, slots=True)
 class Tema:
