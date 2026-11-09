@@ -68,3 +68,12 @@ def test_comando_exemplo(cache_sp: Path, tmp_path: Path) -> None:
 
     assert resultado.exit_code == 0, resultado.output
     assert len(ler_tidy(saida)) == 2
+
+
+def test_avisa_quando_pede_mais_rotas_que_municipios(
+    malha: gpd.GeoDataFrame, caplog: pytest.LogCaptureFixture
+) -> None:
+    linhas = gerar_exemplo(malha.iloc[:2], OpcoesExemplo(rotas=5, sujeira=False))
+
+    assert len({linha["rota_id"] for linha in linhas}) == 2
+    assert "só 2 município(s); gerando 2 rota(s) em vez de 5" in caplog.text

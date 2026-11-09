@@ -48,6 +48,13 @@ def gerar_exemplo(malha: gpd.GeoDataFrame, opcoes: OpcoesExemplo | None = None) 
     centros = np.column_stack(
         [projetada.representative_point().x, projetada.representative_point().y]
     )
+    if opcoes.rotas > len(projetada):
+        log.warning(
+            "a malha tem só %d município(s); gerando %d rota(s) em vez de %d",
+            len(projetada),
+            len(projetada),
+            opcoes.rotas,
+        )
     sementes = _sementes(centros, min(opcoes.rotas, len(projetada)), rng)
     grupos = _grupos(centros, sementes, opcoes, rng)
 
