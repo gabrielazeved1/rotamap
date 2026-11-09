@@ -1,0 +1,41 @@
+# por enquanto nenhum md sobe, o readme final entra no fim
+*.md
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+
+# saidas geradas
+saida/
+*.pptx
+*.ppsx
+
+# dados reais nunca sobem, so o exemplo sintetico
+dados/
+*.csv
+!examples/*.csv
+
+# malhas baixadas
+malha/
+*.shp
+*.shx
+*.dbf
+*.prj
+*.cpg
+*.gpkg
+
+# sistema e editor
+.DS_Store
+.vscode/
+.idea/
+.env
