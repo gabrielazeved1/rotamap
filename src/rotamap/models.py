@@ -1,3 +1,4 @@
+import re
 from dataclasses import dataclass, field
 
 UFS = frozenset(
@@ -22,3 +23,9 @@ class Rota:
     id: str
     nome: str
     paradas: list[Parada] = field(default_factory=list)
+
+
+def chave_rota(rota_id: str) -> tuple[tuple[int, int | str], ...]:
+    """ordena ids como numeros quando possivel: 2 vem antes de 10."""
+    partes = re.split(r"(\d+)", rota_id)
+    return tuple((0, int(p)) if p.isdigit() else (1, p) for p in partes if p)
