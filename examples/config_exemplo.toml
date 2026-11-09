@@ -1,0 +1,47 @@
+# config do dataset sintetico de examples/rotas_exemplo.csv
+# uso: rotamap run examples/rotas_exemplo.csv -c examples/config_exemplo.toml -o saida/
+
+titulo = "Distribuidora Exemplo"
+subtitulo = "Rotas de entrega · São Paulo"
+resumo = ["Municípios", "Faturamento", "Margem"]
+
+[geo.aliases]
+"Retirada no balcão" = ""
+
+[render]
+dpi = 150
+
+[[metricas]]
+rotulo = "Municípios"
+agregacao = "contagem"
+formato = "inteiro"
+
+[[metricas]]
+rotulo = "Faturamento"
+coluna = "valor_total"
+formato = "moeda"
+
+[[metricas]]
+rotulo = "Margem"
+coluna = "lucro_pct"
+agregacao = "ponderada"
+peso = "valor_total"
+formato = "percentual"
+casas = 1
+
+[[metricas]]
+rotulo = "Clientes atendidos"
+coluna = "atendidos"
+formato = "inteiro"
+
+[[metricas]]
+rotulo = "Entregas"
+coluna = "entregas"
+formato = "inteiro"
+
+[[metricas]]
+rotulo = "Valor por entrega"
+coluna = "valor_total"
+agregacao = "razao"
+por = "entregas"
+formato = "moeda"

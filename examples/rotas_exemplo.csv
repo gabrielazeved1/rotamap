@@ -1,0 +1,344 @@
+rota_id,rota_nome,municipio,uf,ordem,clientes,atendidos,entregas,valor_total,peso_kg,lucro_pct
+101,Região de Rosana,Rosana,SP,1,28,26,78,164734.81,18675.5,17.85
+101,Região de Rosana,Euclides da Cunha Paulista,SP,2,3,1,1,2291.49,224.8,12.69
+101,Região de Rosana,ROSANA CENTRO,SP,3,22,19,57,167262.89,19527.8,14.35
+101,Região de Rosana,Retirada no balcão,SP,4,12,8,16,71566.52,6389.8,19.31
+102,Região de Marabá Paulista,Marabá Paulista,SP,1,25,7,14,38246.27,3801.9,15.03
+102,Região de Marabá Paulista,Mirante do Paranapanema,SP,2,3,2,6,14400.4,1530.2,11.15
+102,Região de Marabá Paulista,Teodoro Sampaio,SP,3,23,13,13,48118.28,4036.6,13.86
+102,Região de Marabá Paulista,Presidente Epitácio,SP,4,5,1,2,6061.7,533.2,17.16
+102,Região de Marabá Paulista,PRESIDENTE VENCESLAU,SP,5,13,7,21,98167.55,8148.3,14.69
+102,Região de Marabá Paulista,Ribeirão dos Índios,SP,6,10,8,16,32346.07,2920.3,15.26
+102,Região de Marabá Paulista,SANTO ANASTACIO,SP,7,35,33,66,111579.5,11774.5,13.11
+102,Região de Marabá Paulista,Presidente Bernardes,SP,8,7,5,5,7465.72,724.3,19.15
+102,Região de Marabá Paulista,Álvares Machado,SP,9,6,2,2,4475.73,426.3,15.96
+102,Região de Marabá Paulista,Estrela do Norte,SP,10,28,28,28,38112.78,3811.8,18.06
+103,Região de São João do Pau d'Alho,São João do Pau d'Alho,SP,1,11,10,20,87885.29,9295.2,11.51
+103,Região de São João do Pau d'Alho,Nova Guataporanga,SP,2,7,2,2,2827.4,262.7,17.34
+103,Região de São João do Pau d'Alho,Paulicéia,SP,3,16,3,9,25857.15,3209.9,18.33
+104,Região de Iepê,Iepê,SP,1,31,12,24,108658.19,9414.8,10.42
+104,Região de Iepê,Nantes,SP,2,16,13,13,42072.27,3329.1,13.32
+104,Região de Iepê,Narandiba,SP,3,15,13,39,238039.49,23407.8,13.24
+104,Região de Iepê,Anhumas,SP,4,32,24,48,224152.0,21380.1,18.22
+104,Região de Iepê,Regente Feijó,SP,5,27,8,16,30288.97,2452.3,21.05
+104,Região de Iepê,Martinópolis,SP,6,71,36,36,52095.26,5764.2,16.18
+104,Região de Iepê,RANCHARIA,SP,7,5,1,2,7818.91,892.4,16.75
+104,Região de Iepê,Paraguaçu Paulista,SP,8,16,9,27,62589.76,7538.1,12.25
+104,Região de Iepê,Cruzália,SP,9,24,15,15,61694.31,6571.8,19.08
+105,Região de Sud Mennucci,Sud Mennucci,SP,1,16,10,10,29700.93,2461.6,19.86
+105,Região de Sud Mennucci,Pereira Barreto,SP,2,40,24,24,66884.03,8283.0,14.27
+105,Região de Sud Mennucci,SUZANAPOLIS,SP,3,19,13,26,75952.92,7324.3,16.73
+105,Região de Sud Mennucci,Aparecida d'Oeste,SP,4,19,18,54,75507.73,6979.3,10.41
+105,Região de Sud Mennucci,Marinópolis,SP,5,15,8,8,36701.85,2963.0,17.19
+105,Região de Sud Mennucci,Palmeira d'Oeste,SP,6,61,27,81,129485.24,15057.9,20.28
+105,Região de Sud Mennucci,Dirce Reis,SP,7,78,33,99,251941.98,20456.7,15.72
+105,Região de Sud Mennucci,AURIFLAMA,SP,8,17,9,18,31595.99,2721.3,14.91
+105,Região de Sud Mennucci,Santo Antônio do Aracanguá,SP,9,10,4,8,22989.1,2616.4,17.01
+105,Região de Sud Mennucci,Santa Fé do Sul,SP,10,22,7,21,25525.13,2038.6,16.25
+106,Região de Osvaldo Cruz,Osvaldo Cruz,SP,1,8,2,2,4079.47,377.4,15.86
+106,Região de Osvaldo Cruz,Inúbia Paulista,SP,2,19,7,7,6795.28,784.3,15.96
+106,Região de Osvaldo Cruz,Lucélia,SP,3,12,7,14,39178.49,2817.1,12.67
+106,Região de Osvaldo Cruz,Adamantina,SP,4,5,1,3,6045.01,704.4,10.89
+106,Região de Osvaldo Cruz,Salmourão,SP,5,7,6,6,15292.17,1706.4,19.15
+106,Região de Osvaldo Cruz,Rinópolis,SP,6,8,7,21,63793.99,5079.1,15.56
+106,Região de Osvaldo Cruz,Iacri,SP,7,63,58,116,259087.33,30118.1,16.21
+106,Região de Osvaldo Cruz,BASTOS,SP,8,6,2,2,3663.26,298.8,19.47
+106,Região de Osvaldo Cruz,Caiabu,SP,9,55,36,72,70284.95,7837.7,13.4
+106,Região de Osvaldo Cruz,Presidente Prudente,SP,10,17,13,13,29855.83,2661.1,15.3
+106,Região de Osvaldo Cruz,Santo Expedito,SP,11,16,9,18,80585.3,5873.9,16.93
+106,Região de Osvaldo Cruz,Flora Rica,SP,12,25,9,27,104075.01,7708.6,18.66
+106,Região de Osvaldo Cruz,Pacaembu,SP,13,23,14,14,29297.4,3211.2,7.21
+106,Região de Osvaldo Cruz,Bento de Abreu,SP,14,21,16,48,152361.56,15162.9,13.86
+106,Região de Osvaldo Cruz,Rubiácea,SP,15,51,39,39,97406.45,7632.7,20.85
+106,Região de Osvaldo Cruz,Guararapes,SP,16,17,9,27,34115.67,3522.4,13.77
+106,Região de Osvaldo Cruz,Gabriel Monteiro,SP,17,34,10,10,23707.34,2288.9,17.85
+107,Região de Populina,POPULINA,SP,1,6,5,5,6155.26,568.0,17.39
+107,Região de Populina,Mesópolis,SP,2,4,2,4,12058.6,1463.2,11.79
+107,Região de Populina,SANTA ALBERTINA,SP,3,20,10,20,39276.56,4001.7,20.44
+107,Região de Populina,Santa Rita d'Oeste,SP,4,75,57,114,339967.24,27597.7,16.36
+107,Região de Populina,SANTA CLARA D'OESTE,SP,5,17,9,18,36577.23,3437.6,16.01
+107,Região de Populina,Aspásia,SP,6,20,13,26,94870.36,11685.6,12.3
+107,Região de Populina,Santa Salete,SP,7,55,39,117,175553.19,20003.4,15.18
+107,Região de Populina,Jales,SP,8,11,6,6,17567.91,1906.4,17.85
+107,Região de Populina,Estrela d'Oeste,SP,9,2,2,6,14965.29,1508.1,19.56
+107,Região de Populina,Guarani d'Oeste,SP,10,18,16,16,30720.21,2318.4,18.96
+107,Região de Populina,Indiaporã,SP,11,9,7,7,28478.46,2603.4,16.31
+107,Região de Populina,Ouroeste,SP,12,8,5,5,16395.81,1255.4,17.31
+107,Região de Populina,Mira Estrela,SP,13,5,3,3,3766.87,399.0,16.45
+107,Região de Populina,Macedônia,SP,14,22,10,20,46301.78,4971.7,14.63
+108,Região de Cândido Mota,Cândido Mota,SP,1,42,9,9,28248.13,2167.1,15.77
+108,Região de Cândido Mota,Palmital,SP,2,13,4,8,9019.02,985.1,16.68
+108,Região de Cândido Mota,Ibirarema,SP,3,49,28,28,79073.0,8957.1,17.3
+108,Região de Cândido Mota,PLATINA,SP,4,16,13,39,48462.85,3729.3,17.96
+108,Região de Cândido Mota,Assis,SP,5,12,8,8,21887.47,1568.7,19.68
+108,Região de Cândido Mota,Florínea,SP,6,62,39,117,544269.57,50548.6,17.84
+109,Região de Queiroz,Queiroz,SP,1,26,19,19,24114.73,1865.4,19.91
+109,Região de Queiroz,Luiziânia,SP,2,32,22,66,92741.96,6942.7,16.31
+109,Região de Queiroz,ARCO-IRIS,SP,3,16,4,4,6099.89,733.4,16.01
+109,Região de Queiroz,Herculândia,SP,4,8,8,16,34945.93,2700.9,15.7
+110,Região de Floreal,Floreal,SP,1,12,9,18,31936.07,3732.4,15.51
+110,Região de Floreal,GASTAO VIDIGAL,SP,2,48,24,48,114788.75,9181.9,21.16
+110,Região de Floreal,NOVA LUZITANIA,SP,3,2,1,2,7060.32,829.1,14.85
+110,Região de Floreal,Lourdes,SP,4,38,31,93,376236.9,42641.4,14.32
+110,Região de Floreal,Turiúba,SP,5,28,12,36,26426.67,2887.0,12.44
+110,Região de Floreal,Monções,SP,6,11,6,18,27497.18,2432.2,23.37
+110,Região de Floreal,Macaubal,SP,7,76,17,51,49109.43,5136.4,13.01
+110,Região de Floreal,Nova Castilho,SP,8,14,11,22,59242.95,6155.6,17.25
+110,Região de Floreal,General Salgado,SP,9,5,3,9,22380.63,2413.4,15.05
+110,Região de Floreal,São João de Iracema,SP,10,21,11,11,59149.93,5448.3,15.23
+110,Região de Floreal,Votuporanga,SP,11,29,13,26,40899.62,4405.1,12.83
+111,Região de Ocauçu,OCAUCU,SP,1,5,4,4,9500.9,721.9,13.98
+111,Região de Ocauçu,Lupércio,SP,2,8,2,4,15579.64,1687.5,15.44
+111,Região de Ocauçu,Vera Cruz,SP,3,8,1,1,1011.04,86.3,12.41
+111,Região de Ocauçu,Marília,SP,4,49,34,102,377112.28,45627.3,17.57
+111,Região de Ocauçu,Echaporã,SP,5,29,25,50,165903.72,18388.7,12.63
+111,Região de Ocauçu,Campos Novos Paulista,SP,6,5,1,3,8832.23,767.5,16.08
+112,Região de Barbosa,Barbosa,SP,1,25,7,14,66276.7,5745.2,21.05
+112,Região de Barbosa,Penápolis,SP,2,9,5,10,10125.2,978.4,11.32
+112,Região de Barbosa,GLICERIO,SP,3,36,23,69,200613.99,17712.1,14.11
+112,Região de Barbosa,Coroados,SP,4,30,19,19,78288.28,7575.4,18.39
+112,Região de Barbosa,Birigui,SP,5,10,8,8,13166.87,970.6,17.95
+112,Região de Barbosa,Brejo Alegre,SP,6,26,13,39,117492.97,10240.1,16.07
+112,Região de Barbosa,Buritama,SP,7,9,6,12,26901.52,2158.9,9.49
+112,Região de Barbosa,Zacarias,SP,8,2,2,4,5152.01,388.2,22.01
+112,Região de Barbosa,PLANALTO,SP,9,31,12,36,73885.99,6729.4,16.77
+112,Região de Barbosa,José Bonifácio,SP,10,32,26,78,120340.35,9069.4,9.75
+112,Região de Barbosa,Ubarana,SP,11,26,15,15,10848.06,931.7,19.7
+112,Região de Barbosa,Mendonça,SP,12,1,1,3,5351.33,551.3,17.7
+112,Região de Barbosa,Sales,SP,13,78,25,75,89233.02,7349.9,13.72
+112,Região de Barbosa,Avanhandava,SP,14,9,4,4,16221.19,1457.0,11.23
+112,Região de Barbosa,ARACATUBA,SP,15,13,5,5,7303.44,533.7,16.81
+113,Região de Fartura,Fartura,SP,1,22,21,42,407211.67,34493.7,13.61
+113,Região de Fartura,Taguaí,SP,2,22,7,14,20887.47,1518.8,16.98
+113,Região de Fartura,Itaporanga,SP,3,8,6,12,39739.03,3051.0,17.06
+113,Região de Fartura,Barão de Antonina,SP,4,84,27,27,28375.41,2876.7,14.86
+113,Região de Fartura,Sarutaiá,SP,5,21,20,60,242361.53,18671.8,18.49
+113,Região de Fartura,Timburi,SP,6,22,21,63,188989.74,16763.2,16.53
+113,Região de Fartura,Piraju,SP,7,19,16,48,102388.3,9923.2,10.74
+114,Região de Mirassol,Mirassol,SP,1,16,3,6,17747.61,1662.3,13.98
+114,Região de Mirassol,Bady Bassitt,SP,2,57,15,45,285462.88,30654.6,15.45
+114,Região de Mirassol,São José do Rio Preto,SP,3,25,23,23,48900.74,5481.2,14.53
+114,Região de Mirassol,Ipiguá,SP,4,9,4,4,9956.12,1080.9,14.74
+114,Região de Mirassol,Monte Aprazível,SP,5,112,85,170,842221.37,98580.7,22.69
+114,Região de Mirassol,Neves Paulista,SP,6,37,33,33,74298.73,8167.5,20.2
+115,Região de Paulo de Faria,PAULO DE FARIA,SP,1,18,13,39,154536.1,12531.9,18.24
+115,Região de Paulo de Faria,Riolândia,SP,2,12,3,6,16886.67,1528.3,14.68
+115,Região de Paulo de Faria,Cardoso,SP,3,1,1,2,3586.31,426.9,11.83
+115,Região de Paulo de Faria,Américo de Campos,SP,4,55,43,86,458911.82,34297.0,14.22
+115,Região de Paulo de Faria,Palestina,SP,5,11,8,24,49240.8,4659.0,15.66
+115,Região de Paulo de Faria,Nova Granada,SP,6,119,79,237,412421.28,40332.7,17.38
+115,Região de Paulo de Faria,Icém,SP,7,37,20,60,75982.73,8176.4,10.7
+115,Região de Paulo de Faria,Guaraci,SP,8,17,8,8,18180.54,1886.8,22.29
+116,Região de Balbinos,Balbinos,SP,1,4,1,3,9392.32,840.4,16.34
+116,Região de Balbinos,Pirajuí,SP,2,20,16,48,60400.07,6798.3,16.54
+116,Região de Balbinos,Guarantã,SP,3,9,4,8,11703.43,1390.0,12.69
+116,Região de Balbinos,Pongaí,SP,4,20,13,13,24485.78,2592.6,19.98
+116,Região de Balbinos,Uru,SP,5,20,12,24,20920.89,1672.2,21.99
+116,Região de Balbinos,Reginópolis,SP,6,17,6,18,16575.56,1760.4,16.63
+116,Região de Balbinos,Iacanga,SP,7,8,4,4,3801.21,271.7,7.75
+116,Região de Balbinos,Borborema,SP,8,12,9,18,81934.69,10121.9,9.6
+116,Região de Balbinos,Avaí,SP,9,26,14,28,114346.71,8782.6,22.03
+117,Região de Itapirapuã Paulista,Itapirapuã Paulista,SP,1,6,4,12,64031.92,4800.2,18.52
+117,Região de Itapirapuã Paulista,Barra do Chapéu,SP,2,19,9,27,59967.23,5956.3,13.59
+117,Região de Itapirapuã Paulista,BOM SUCESSO DE ITARARE,SP,3,25,8,24,44857.19,4306.0,11.87
+117,Região de Itapirapuã Paulista,Itararé,SP,4,9,2,2,7493.22,781.5,14.82
+117,Região de Itapirapuã Paulista,Ribeira,SP,5,17,10,20,36401.73,2640.3,16.49
+117,Região de Itapirapuã Paulista,Itaoca,SP,6,29,18,18,40313.83,3191.6,15.96
+118,Região de Borebi,Borebi,SP,1,4,1,2,1652.59,200.8,19.57
+118,Região de Borebi,Agudos,SP,2,13,12,24,56523.78,4528.3,8.97
+118,Região de Borebi,Piratininga,SP,3,35,14,28,34588.12,2918.0,13.81
+118,Região de Borebi,Paulistânia,SP,4,21,12,24,67602.5,7134.6,12.8
+118,Região de Borebi,Iaras,SP,5,14,5,5,10692.59,991.6,17.52
+118,Região de Borebi,Lençóis Paulista,SP,6,18,14,14,40425.37,4191.4,15.87
+118,Região de Borebi,Pratânia,SP,7,16,14,42,43183.87,4154.2,13.72
+119,Região de Pindorama,PINDORAMA,SP,1,25,15,15,67497.75,4998.2,19.4
+119,Região de Pindorama,Catanduva,SP,2,2,1,3,4075.38,347.9,16.44
+119,Região de Pindorama,Catiguá,SP,3,15,9,27,27924.86,2622.7,16.02
+119,Região de Pindorama,Tabapuã,SP,4,12,8,8,15883.83,1824.2,11.52
+119,Região de Pindorama,Marapoama,SP,5,16,9,27,61731.85,4852.6,14.48
+119,Região de Pindorama,Santa Adélia,SP,6,47,34,34,38824.94,3040.0,10.72
+119,Região de Pindorama,Ariranha,SP,7,30,21,42,60575.62,5120.8,21.39
+119,Região de Pindorama,Pirangi,SP,8,44,15,30,86354.94,6785.3,15.73
+120,Região de Paranapanema,Paranapanema,SP,1,4,4,12,26775.51,2671.9,18.97
+120,Região de Paranapanema,Itaí,SP,2,21,20,40,59887.34,5262.0,19.69
+120,Região de Paranapanema,Arandu,SP,3,8,3,3,8489.9,818.0,18.62
+120,Região de Paranapanema,Itatinga,SP,4,9,8,16,30659.44,3298.3,17.23
+120,Região de Paranapanema,Angatuba,SP,5,10,3,9,24911.56,1811.6,14.52
+120,Região de Paranapanema,Campina do Monte Alegre,SP,6,17,13,13,25907.2,2187.6,19.07
+120,Região de Paranapanema,BURI,SP,7,13,11,22,75779.56,8566.4,12.96
+120,Região de Paranapanema,ITAPEVA,SP,8,17,15,45,57613.79,6746.3,11.81
+120,Região de Paranapanema,Itaberá,SP,9,8,8,8,21000.25,1619.9,14.41
+121,Região de Bocaina,Bocaina,SP,1,16,9,9,20213.04,1646.5,14.45
+121,Região de Bocaina,Boa Esperança do Sul,SP,2,34,22,44,73010.51,7633.7,14.83
+121,Região de Bocaina,Nova Europa,SP,3,57,47,141,239301.6,28264.6,16.94
+121,Região de Bocaina,Tabatinga,SP,4,10,5,15,27518.75,2816.6,14.3
+121,Região de Bocaina,Itaju,SP,5,40,24,48,71674.37,8135.1,12.47
+121,Região de Bocaina,Bariri,SP,6,7,7,14,20684.91,1978.6,12.35
+121,Região de Bocaina,Boracéia,SP,7,32,16,48,102719.02,9110.5,16.22
+121,Região de Bocaina,Itapuí,SP,8,5,3,3,8700.33,794.5,16.63
+121,Região de Bocaina,Jaú,SP,9,5,5,10,7394.14,546.5,18.06
+121,Região de Bocaina,Barra Bonita,SP,10,45,40,80,232547.27,25001.1,11.02
+121,Região de Bocaina,Mineiros do Tietê,SP,11,15,7,14,29740.18,2604.2,15.56
+121,Região de Bocaina,Dois Córregos,SP,12,9,4,12,37428.21,3158.7,14.77
+121,Região de Bocaina,Ribeirão Bonito,SP,13,16,10,30,76503.38,5840.7,10.14
+121,Região de Bocaina,Araraquara,SP,14,3,1,2,5444.07,473.6,17.99
+121,Região de Bocaina,Pederneiras,SP,15,35,21,63,231375.88,25086.4,17.93
+122,Região de Ribeirão Grande,Ribeirão Grande,SP,1,7,3,9,49054.08,3526.5,15.32
+122,Região de Ribeirão Grande,Capão Bonito,SP,2,29,12,24,80132.01,7262.9,16.66
+122,Região de Ribeirão Grande,Eldorado,SP,3,12,10,20,37276.48,4253.7,18.64
+122,Região de Ribeirão Grande,Iporanga,SP,4,4,3,3,4287.7,527.6,17.98
+122,Região de Ribeirão Grande,Ribeirão Branco,SP,5,8,6,18,62973.86,7560.2,13.92
+123,Região de Guaíra,Guaíra,SP,1,13,12,24,83275.43,7814.1,20.24
+123,Região de Guaíra,Miguelópolis,SP,2,38,36,72,162136.85,12078.6,14.89
+123,Região de Guaíra,Aramina,SP,3,19,9,9,12383.1,902.6,10.51
+123,Região de Guaíra,Ituverava,SP,4,29,18,54,59873.41,7234.8,20.27
+123,Região de Guaíra,Jaborandi,SP,5,10,3,6,8813.37,696.2,11.32
+123,Região de Guaíra,Colina,SP,6,24,8,16,22655.85,2391.5,15.2
+124,Região de Cananéia,Cananéia,SP,1,9,6,6,8759.88,646.3,19.21
+124,Região de Cananéia,Jacupiranga,SP,2,26,12,12,16789.29,2079.9,16.44
+124,Região de Cananéia,Barra do Turvo,SP,3,10,6,6,19766.32,1509.0,19.57
+125,Região de Anhembi,ANHEMBI,SP,1,1,1,2,4266.5,343.0,12.72
+125,Região de Anhembi,São Pedro,SP,2,38,31,93,128084.8,9270.3,12.95
+125,Região de Anhembi,Piracicaba,SP,3,33,11,22,44949.39,3291.7,19.88
+125,Região de Anhembi,Bofete,SP,4,4,4,4,7127.41,608.6,12.18
+125,Região de Anhembi,Pardinho,SP,5,16,7,21,43422.38,5090.3,13.74
+125,Região de Anhembi,SAO MANUEL,SP,6,7,2,6,16957.93,1694.1,14.04
+126,Região de Dumont,DUMONT,SP,1,18,15,45,61658.12,5179.3,14.24
+126,Região de Dumont,Barrinha,SP,2,17,12,12,20780.26,2508.4,16.72
+126,Região de Dumont,Pradópolis,SP,3,14,8,8,17775.39,1836.7,16.31
+126,Região de Dumont,Guariba,SP,4,69,35,70,384647.52,35816.9,16.51
+126,Região de Dumont,MOTUCA,SP,5,9,5,5,8437.96,1037.8,16.6
+126,Região de Dumont,Rincão,SP,6,8,6,6,19701.84,2422.3,18.9
+126,Região de Dumont,Luís Antônio,SP,7,16,9,27,64480.16,4749.9,22.64
+126,Região de Dumont,Cravinhos,SP,8,10,6,12,14861.91,1067.2,15.72
+126,Região de Dumont,Ribeirão Preto,SP,9,6,5,5,6642.3,479.0,17.98
+126,Região de Dumont,Serrana,SP,10,15,14,42,75475.67,7159.6,17.43
+126,Região de Dumont,JARDINOPOLIS,SP,11,15,14,28,67599.18,5137.8,11.58
+126,Região de Dumont,Sertãozinho,SP,12,25,21,21,100981.41,11073.9,17.98
+126,Região de Dumont,Pontal,SP,13,10,7,14,27773.16,3056.0,13.02
+126,Região de Dumont,Jaboticabal,SP,14,20,11,11,18773.88,1846.4,13.02
+127,Região de Tatuí,Tatuí,SP,1,27,15,45,64166.08,7792.9,12.33
+127,Região de Tatuí,Cesário Lange,SP,2,43,21,42,140543.13,10317.8,10.57
+127,Região de Tatuí,Pereiras,SP,3,9,3,3,17744.63,1976.6,17.14
+127,Região de Tatuí,PORANGABA,SP,4,11,5,10,32597.08,3400.0,14.97
+127,Região de Tatuí,Torre de Pedra,SP,5,4,1,1,2571.63,280.8,15.9
+127,Região de Tatuí,Guareí,SP,6,16,9,9,27304.31,2963.8,16.48
+127,Região de Tatuí,QUADRA,SP,7,38,33,33,65288.12,6603.1,17.4
+127,Região de Tatuí,Alambari,SP,8,18,12,12,31452.98,2449.9,18.61
+127,Região de Tatuí,Capela do Alto,SP,9,7,6,12,34107.82,3984.7,13.86
+127,Região de Tatuí,ARACOIABA DA SERRA,SP,10,30,21,63,93296.43,10864.5,16.63
+127,Região de Tatuí,SALTO DE PIRAPORA,SP,11,21,6,12,33131.57,3199.1,15.22
+127,Região de Tatuí,Sorocaba,SP,12,16,10,30,98994.17,8987.2,13.57
+127,Região de Tatuí,Porto Feliz,SP,13,16,12,24,180839.02,15870.4,17.27
+127,Região de Tatuí,Rafard,SP,14,39,24,24,70554.76,5415.3,14.95
+127,Região de Tatuí,Tietê,SP,15,19,10,30,140758.48,14691.9,15.0
+127,Região de Tatuí,JUMIRIM,SP,16,171,106,212,846543.58,100717.1,16.38
+127,Região de Tatuí,Laranjal Paulista,SP,17,14,12,24,35042.39,2621.3,17.8
+128,Região de Registro,Registro,SP,1,20,12,24,46227.52,5359.8,19.9
+129,Região de Rio Claro,Rio Claro,SP,1,27,25,50,510116.11,37569.9,13.78
+129,Região de Rio Claro,SANTA GERTRUDES,SP,2,9,5,15,20410.29,1524.3,16.16
+129,Região de Rio Claro,Cordeirópolis,SP,3,23,4,8,16593.78,1653.7,16.7
+129,Região de Rio Claro,ARARAS,SP,4,3,2,4,9409.15,948.4,22.03
+129,Região de Rio Claro,Engenheiro Coelho,SP,5,25,8,24,36407.4,3821.4,16.52
+129,Região de Rio Claro,Cosmópolis,SP,6,3,2,2,3329.24,297.2,15.47
+129,Região de Rio Claro,Americana,SP,7,16,7,14,30210.04,2244.6,17.31
+129,Região de Rio Claro,Santa Bárbara d'Oeste,SP,8,26,13,26,123993.67,14490.8,13.4
+129,Região de Rio Claro,Iracemápolis,SP,9,15,11,33,59630.48,4511.9,16.28
+129,Região de Rio Claro,Charqueada,SP,10,8,5,10,28107.18,2479.2,17.74
+129,Região de Rio Claro,IPEUNA,SP,11,107,80,240,315284.67,25795.1,13.23
+129,Região de Rio Claro,Itirapina,SP,12,6,4,4,8585.7,620.7,13.58
+129,Região de Rio Claro,São Carlos,SP,13,4,1,1,1833.14,148.2,13.77
+129,Região de Rio Claro,DESCALVADO,SP,14,14,8,8,28030.82,2567.8,19.1
+130,Região de Franca,Franca,SP,1,5,3,9,38698.8,2890.4,8.87
+130,Região de Franca,Restinga,SP,2,7,5,15,55646.78,6150.7,15.36
+130,Região de Franca,São José da Bela Vista,SP,3,3,3,6,8695.68,834.5,18.73
+130,Região de Franca,Nuporanga,SP,4,17,16,16,30435.53,2769.9,19.71
+130,Região de Franca,Batatais,SP,5,15,14,14,44019.28,3626.4,18.09
+130,Região de Franca,ALTINOPOLIS,SP,6,116,74,222,1012642.49,104091.8,19.49
+130,Região de Franca,ITIRAPUA,SP,7,35,26,26,50435.08,6194.0,14.53
+130,Região de Franca,Cristais Paulista,SP,8,7,3,9,17582.51,1608.1,16.04
+130,Região de Franca,Jeriquara,SP,9,48,22,44,126482.14,11640.3,16.17
+130,Região de Franca,RIBEIRAO CORRENTE,SP,10,23,18,54,412595.59,37075.0,17.26
+130,Região de Franca,Guará,SP,11,47,20,40,30370.62,3412.6,9.34
+130,Região de Franca,Buritizal,SP,12,56,23,69,79371.83,8914.6,15.9
+130,Região de Franca,IGARAPAVA,SP,13,10,4,12,45534.04,3646.1,18.53
+131,Região de Itariri,Itariri,SP,1,57,44,88,330132.93,23669.7,15.47
+131,Região de Itariri,Pedro de Toledo,SP,2,8,3,3,10388.23,814.5,15.89
+131,Região de Itariri,Peruíbe,SP,3,18,15,30,88189.09,8837.7,20.71
+131,Região de Itariri,Itanhaém,SP,4,62,56,112,356009.26,32593.5,20.44
+131,Região de Itariri,Mongaguá,SP,5,41,30,90,129770.79,14124.1,15.66
+131,Região de Itariri,SAO LOURENCO DA SERRA,SP,6,63,51,153,492232.41,40509.3,16.13
+131,Região de Itariri,Ibiúna,SP,7,14,10,30,57915.27,4753.5,14.16
+131,Região de Itariri,Piedade,SP,8,4,3,6,14666.3,1048.6,18.12
+132,Região de Itupeva,Itupeva,SP,1,3,2,6,12026.29,1153.5,14.07
+132,Região de Itupeva,Indaiatuba,SP,2,25,16,32,92075.9,7226.5,13.4
+132,Região de Itupeva,Cabreúva,SP,3,3,1,3,5737.63,671.7,20.73
+132,Região de Itupeva,Louveira,SP,4,3,2,6,29560.29,2559.7,14.1
+133,Região de Aguaí,Aguaí,SP,1,26,20,40,217047.34,26143.1,16.3
+133,Região de Aguaí,São João da Boa Vista,SP,2,42,17,34,84287.44,8958.1,11.43
+133,Região de Aguaí,AGUAS DA PRATA,SP,3,38,31,93,144010.24,16619.9,10.97
+133,Região de Aguaí,VARGEM GRANDE DO SUL,SP,4,6,5,15,35144.67,2642.1,17.71
+133,Região de Aguaí,CASA BRANCA,SP,5,6,4,12,24857.15,2054.6,18.31
+133,Região de Aguaí,PORTO FERREIRA,SP,6,31,10,20,65535.27,4810.9,14.77
+133,Região de Aguaí,Leme,SP,7,16,10,30,28765.86,3061.4,12.06
+133,Região de Aguaí,Conchal,SP,8,13,6,6,10185.93,1134.4,19.97
+133,Região de Aguaí,Espírito Santo do Pinhal,SP,9,27,15,30,88354.87,6586.3,13.28
+134,Região de Mococa,Mococa,SP,1,16,10,10,36596.42,4518.7,21.45
+134,Região de Mococa,CASSIA DOS COQUEIROS,SP,2,7,6,6,14166.63,1282.8,18.54
+134,Região de Mococa,Cajuru,SP,3,52,24,24,59932.53,4336.8,13.89
+134,Região de Mococa,Santo Antônio da Alegria,SP,4,30,15,15,35279.39,2575.1,14.36
+134,Região de Mococa,SANTA ROSA DE VITERBO,SP,5,45,12,24,99352.96,12137.0,19.65
+134,Região de Mococa,Tambaú,SP,6,34,25,75,160808.68,19497.8,21.12
+134,Região de Mococa,Itobi,SP,7,18,18,36,67124.68,5367.4,20.31
+134,Região de Mococa,São Sebastião da Grama,SP,8,25,16,48,107834.03,8284.0,21.68
+134,Região de Mococa,Divinolândia,SP,9,28,8,24,103081.56,11458.7,19.44
+134,Região de Mococa,São José do Rio Pardo,SP,10,24,16,48,202413.33,15015.9,11.13
+134,Região de Mococa,Tapiratiba,SP,11,26,19,38,116482.5,9703.3,18.36
+135,Região de Águas de Lindóia,AGUAS DE LINDOIA,SP,1,14,3,6,6300.08,525.2,10.96
+135,Região de Águas de Lindóia,Lindóia,SP,2,14,11,22,66809.95,6940.0,9.7
+135,Região de Águas de Lindóia,Itapira,SP,3,32,24,72,184193.33,13388.5,21.05
+135,Região de Águas de Lindóia,Santo Antônio de Posse,SP,4,42,28,84,261612.81,26016.6,17.41
+135,Região de Águas de Lindóia,Jaguariúna,SP,5,116,37,74,300171.88,23899.2,17.02
+135,Região de Águas de Lindóia,Holambra,SP,6,23,14,14,70840.37,5537.6,17.87
+135,Região de Águas de Lindóia,Pedreira,SP,7,7,7,7,7831.14,730.7,19.71
+135,Região de Águas de Lindóia,MONTE ALEGRE DO SUL,SP,8,19,15,45,85717.91,6571.4,15.74
+135,Região de Águas de Lindóia,Socorro,SP,9,18,8,16,36256.92,4305.7,12.01
+136,Região de Ferraz de Vasconcelos,FERRAZ DE VASCONCELOS,SP,1,3,2,6,12328.79,1138.3,13.96
+136,Região de Ferraz de Vasconcelos,Suzano,SP,2,15,7,21,37282.91,2911.9,20.61
+136,Região de Ferraz de Vasconcelos,RIBEIRAO PIRES,SP,3,18,13,39,191787.73,20332.2,13.55
+136,Região de Ferraz de Vasconcelos,Rio Grande da Serra,SP,4,14,5,10,25066.62,1800.5,19.62
+136,Região de Ferraz de Vasconcelos,Mauá,SP,5,11,4,8,14926.5,1333.1,15.74
+136,Região de Ferraz de Vasconcelos,Santo André,SP,6,6,5,10,56772.55,6292.4,16.87
+136,Região de Ferraz de Vasconcelos,São Bernardo do Campo,SP,7,129,62,186,884774.2,94543.5,15.94
+136,Região de Ferraz de Vasconcelos,Diadema,SP,8,9,3,6,18783.11,1853.9,13.9
+136,Região de Ferraz de Vasconcelos,São Caetano do Sul,SP,9,11,7,14,37141.92,3584.9,15.19
+136,Região de Ferraz de Vasconcelos,Itaquaquecetuba,SP,10,15,7,7,13873.92,1289.4,15.28
+136,Região de Ferraz de Vasconcelos,Santa Isabel,SP,11,21,15,30,30900.76,2364.9,19.7
+136,Região de Ferraz de Vasconcelos,GUARAREMA,SP,12,12,5,5,13414.19,1221.5,15.28
+136,Região de Ferraz de Vasconcelos,Mairiporã,SP,13,48,32,32,47751.5,3592.4,14.9
+137,Região de Joanópolis,Joanópolis,SP,1,53,37,74,225195.91,16663.1,18.57
+137,Região de Joanópolis,Vargem,SP,2,6,4,8,22223.82,1844.0,17.2
+137,Região de Joanópolis,Pedra Bela,SP,3,1,1,1,3559.28,284.2,12.58
+137,Região de Joanópolis,Bragança Paulista,SP,4,13,9,27,73192.08,8411.3,12.74
+137,Região de Joanópolis,Atibaia,SP,5,18,11,33,61565.96,5479.8,13.29
+137,Região de Joanópolis,Bom Jesus dos Perdões,SP,6,13,12,36,50149.31,3599.9,21.18
+137,Região de Joanópolis,Nazaré Paulista,SP,7,10,7,14,31117.57,2224.4,20.18
+137,Região de Joanópolis,Igaratá,SP,8,7,6,18,18513.1,1856.4,19.48
+137,Região de Joanópolis,SAO JOSE DOS CAMPOS,SP,9,38,10,10,14774.1,1793.0,14.82
+138,Região de Pindamonhangaba,Pindamonhangaba,SP,1,3,2,6,8242.11,608.7,16.99
+138,Região de Pindamonhangaba,ROSEIRA,SP,2,29,14,42,80414.99,7451.9,14.37
+138,Região de Pindamonhangaba,Aparecida,SP,3,8,7,21,79334.25,7361.6,18.9
+138,Região de Pindamonhangaba,Guaratinguetá,SP,4,25,16,32,298687.24,36099.6,14.61
+138,Região de Pindamonhangaba,CAMPOS DO JORDAO,SP,5,23,15,15,26945.23,2337.6,19.2
+138,Região de Pindamonhangaba,SAO BENTO DO SAPUCAI,SP,6,21,17,34,63707.48,4942.3,20.44
+138,Região de Pindamonhangaba,Tremembé,SP,7,14,12,24,104014.46,8330.0,14.28
+139,Região de Ilhabela,ILHABELA,SP,1,25,17,34,74652.52,8538.4,18.62
+139,Região de Ilhabela,Caraguatatuba,SP,2,6,6,6,35556.27,3308.7,16.83
+139,Região de Ilhabela,Natividade da Serra,SP,3,4,1,1,1914.38,239.1,14.39
+139,Região de Ilhabela,São Sebastião,SP,4,4,3,6,22865.69,2450.5,16.9
+140,Região de Bananal,Bananal,SP,1,28,7,7,43959.83,3755.3,11.01
+140,Região de Bananal,Arapeí,SP,2,142,49,49,137475.7,9832.0,16.23
+140,Região de Bananal,São José do Barreiro,SP,3,13,13,26,46623.0,3813.3,14.3
+140,Região de Bananal,SILVEIRAS,SP,4,9,7,21,48581.75,5132.9,20.11
+140,Região de Bananal,Lavrinhas,SP,5,19,7,14,37279.02,3095.0,13.33
+140,Região de Bananal,Queluz,SP,6,4,3,3,34628.21,2842.2,12.23
