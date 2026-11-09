@@ -20,6 +20,9 @@ saida/
 *.pptx
 *.ppsx
 
+# codigo do freela original, so referencia local
+legado/
+
 # dados reais nunca sobem, so o exemplo sintetico
 dados/
 *.csv
