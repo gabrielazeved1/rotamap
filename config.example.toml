@@ -23,13 +23,13 @@ cutoff = 0.85                 # similaridade mínima para aceitar um nome aproxi
 # nome na entrada = município do ibge (nome ou código); vazio ignora a linha no mapa
 [geo.aliases]
 "CD CAMPINAS" = "Campinas"
-"FILIAL RIBEIRAO" = "3543402"
+"FILIAL SOROCABA" = "3552205"
 "RETIRADA NO BALCAO" = ""
 
 [render]
 dpi = 200
 largura = 12.0              # polegadas do mapa geral
-rotulo = 0.022              # diâmetro dos números como fração da largura do mapa
+rotulo = 0.022              # diâmetro dos números como fração da largura do menu no ppt
 tamanho_rota = [6.5, 5.8]   # polegadas de cada mapa de rota
 
 [tema]
