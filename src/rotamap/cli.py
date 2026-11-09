@@ -11,7 +11,8 @@ from rich.logging import RichHandler
 
 from rotamap import __version__
 from rotamap.config import Config, carregar_config
-from rotamap.geo import ErroIBGE
+from rotamap.exemplo import OpcoesExemplo, gerar_exemplo, salvar_csv
+from rotamap.geo import ErroIBGE, carregar_malha
 from rotamap.pipeline import (
     ArtefatoAusente,
     Pasta,
@@ -152,3 +153,21 @@ def ppt(out: Saida = Path("saida"), config: ArquivoConfig = None) -> None:
     """Monta a apresentação a partir dos artefatos das etapas anteriores."""
     with _erros_amigaveis():
         etapa_ppt(Pasta(out), _config(config))
+
+
+@app.command()
+def exemplo(
+    out: Annotated[Path, typer.Option("--out", "-o", help="CSV a gerar.")] = Path(
+        "examples/rotas_exemplo.csv"
+    ),
+    uf: Annotated[str, typer.Option("--uf", help="UF dos municípios.")] = "SP",
+    rotas: Annotated[int, typer.Option("--rotas", min=1, help="Quantidade de rotas.")] = 40,
+    seed: Annotated[int, typer.Option("--seed", help="Semente do sorteio.")] = 42,
+    config: ArquivoConfig = None,
+) -> None:
+    """Gera um CSV sintético com municípios reais e rotas e métricas inventadas."""
+    with _erros_amigaveis():
+        geo = _config(config).geo
+        malha = carregar_malha([uf.upper()], cache=geo.cache, qualidade=geo.qualidade)
+        salvar_csv(gerar_exemplo(malha.geo, OpcoesExemplo(rotas=rotas, seed=seed)), out)
+    console.print(f"[green]pronto:[/] {out}")
