@@ -9,6 +9,7 @@ from matplotlib.image import imread
 from shapely.geometry import Polygon, box
 
 from rotamap.models import chave_rota
+from rotamap.ppt.layout import MENU_MAPA
 from rotamap.render import (
     ARQ_CAPA,
     ARQ_HOTSPOTS,
@@ -144,3 +145,46 @@ def test_renderiza_e_hotspots_batem_com_a_imagem(
         # o centro tem o numero em branco; o circulo escuro aparece logo acima do texto
         acima = linha - int(dados["raio"] * menu.shape[1] * 0.75)
         assert np.allclose(menu[acima, coluna, :3], to_rgb(COR_ROTULO), atol=0.05)
+
+
+def _grade_retangular(colunas: int, linhas: int) -> tuple[gpd.GeoDataFrame, gpd.GeoDataFrame]:
+    quadrados = [
+        box(
+            ORIGEM[0] + i * LADO,
+            ORIGEM[1] + j * LADO,
+            ORIGEM[0] + (i + 1) * LADO,
+            ORIGEM[1] + (j + 1) * LADO,
+        )
+        for i in range(colunas)
+        for j in range(linhas)
+    ]
+    malha = gpd.GeoDataFrame(
+        {"cod_ibge": [str(k) for k in range(len(quadrados))], "nome": "M", "uf": "SP"},
+        geometry=quadrados,
+        crs="EPSG:4674",
+    )
+    rotas = malha.iloc[:2].copy()
+    rotas["rota_id"] = ["1", "2"]
+    rotas["rota_nome"] = "R"
+    return malha, rotas
+
+
+@pytest.mark.parametrize(("colunas", "linhas"), [(6, 2), (2, 6)])
+def test_rotulo_tem_o_mesmo_tamanho_no_slide_em_qualquer_formato(
+    colunas: int, linhas: int, tmp_path: Path
+) -> None:
+    malha, rotas = _grade_retangular(colunas, linhas)
+    opcoes = OpcoesRender(largura=4, dpi=30, tamanho_rota=(2, 2))
+
+    renderizar(malha, rotas, tmp_path, opcoes)
+
+    dados = json.loads((tmp_path / ARQ_HOTSPOTS).read_text(encoding="utf-8"))
+    aspecto = dados["largura_px"] / dados["altura_px"]
+    # largura que a imagem ocupa quando encaixada na caixa do menu, com a caixa valendo 1
+    largura_exibida = min(1.0, aspecto / opcoes.proporcao_menu)
+    diametro_no_slide = 2 * dados["raio"] * largura_exibida
+    assert diametro_no_slide == pytest.approx(opcoes.rotulo, rel=0.02)
+
+
+def test_proporcao_do_menu_acompanha_o_layout_do_ppt() -> None:
+    assert OpcoesRender().proporcao_menu == pytest.approx(MENU_MAPA.largura / MENU_MAPA.altura)

@@ -39,7 +39,10 @@ class OpcoesRender:
     largura: float = 12.0  # polegadas do mapa geral
     dpi: int = 200
     margem: float = 0.02  # fracao da largura em volta do mapa geral
-    rotulo: float = 0.022  # diametro do rotulo como fracao da largura
+    # diametro do rotulo como fracao da largura da caixa onde o menu aparece no ppt
+    rotulo: float = 0.022
+    # largura sobre altura dessa caixa (ppt/layout.py: MENU_MAPA)
+    proporcao_menu: float = 8.9 / 6.1
     tamanho_rota: tuple[float, float] = (6.5, 5.8)  # polegadas de cada mapa de rota
     margem_rota: float = 0.08
 
@@ -103,10 +106,10 @@ def mapa_geral(
     _desenhar_base(ax, malha, rotas, areas, cores)
     fig.savefig(pasta / ARQ_CAPA, dpi=opcoes.dpi, transparent=True)
 
-    raio = opcoes.rotulo * extensao.largura / 2
+    raio = _raio_rotulo(extensao, opcoes)
     geometrias = dict(zip(areas["rota_id"], areas.geometry, strict=True))
     posicoes = posicionar_rotulos(geometrias, raio)
-    fonte = opcoes.rotulo * opcoes.largura * 72 * 0.38
+    fonte = 2 * raio / extensao.largura * opcoes.largura * 72 * 0.38
     for rota_id, (x, y) in posicoes.items():
         ax.add_patch(Circle((x, y), raio, facecolor=COR_ROTULO, edgecolor="white", lw=0.8))
         ax.text(
@@ -141,6 +144,14 @@ def mapa_rota(
     caminho = caminho_mapa_rota(pasta, rota_id)
     fig.savefig(caminho, dpi=opcoes.dpi, transparent=True)
     return caminho
+
+
+def _raio_rotulo(extensao: Extensao, opcoes: OpcoesRender) -> float:
+    """raio em unidades do mapa para o rotulo ter o mesmo tamanho no slide em qualquer uf."""
+    # mapa mais "em pe" que a caixa é encaixado pela altura e aparece mais estreito,
+    # entao o rotulo cresce na mesma proporcao para nao encolher no slide
+    aspecto = extensao.largura / extensao.altura
+    return opcoes.rotulo / 2 * extensao.largura * max(1.0, opcoes.proporcao_menu / aspecto)
 
 
 def _figura(tamanho: tuple[float, float], extensao: Extensao) -> tuple[Figure, Axes]:
