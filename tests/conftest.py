@@ -11,7 +11,7 @@ LADO = 0.2
 MUNICIPIOS = [
     ("3509502", "Campinas", (0, 0)),
     ("3543402", "Ribeirão Preto", (1, 0)),
-    ("3515152", "Euclides da Cunha Paulista", (2, 0)),
+    ("3515350", "Euclides da Cunha Paulista", (2, 0)),
 ]
 DISTRITOS = [
     ("Campinas", "3509502"),
